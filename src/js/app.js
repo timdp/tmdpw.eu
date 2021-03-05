@@ -1,1 +1,1 @@
-smoothScroll.init()
+new SmoothScroll('a[href*="#"]')

@@ -1,4 +1,6 @@
+Thumbs.db
+.DS_Store
 node_modules/
 npm-debug.log
-[Tt]humbs.db
-.DS_Store
+yarn-error.log
+/dist/

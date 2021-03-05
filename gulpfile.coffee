@@ -20,7 +20,7 @@ sources =
   assets:   ["#{src}/*", "#{src}/.*", "!#{src}/#{index}.jade"]
   css:      ["#{src}/css/**/*.scss", "!#{src}/css/**/_*.scss"]
   js:       [
-              "node_modules/smooth-scroll/dist/js/smooth-scroll.js",
+              "node_modules/smooth-scroll/dist/smooth-scroll.polyfills.js",
               "#{src}/js/**/*.js"
             ]
 
@@ -31,10 +31,10 @@ lr_server = null
 gulp.task "html", ["init"], ->
   gulp.src(sources.html)
     .pipe(plugins.jade(data: config.properties))
-    .pipe(gulp.dest('.'))
+    .pipe(gulp.dest(target))
 
 gulp.task "assets", ->
-  gulp.src(sources.assets)
+  gulp.src(sources.assets, noDir: true)
     .pipe(gulp.dest(target))
 
 gulp.task "favicon", (cb) ->
@@ -62,14 +62,15 @@ gulp.task "js", ["init"], ->
     .pipe(plugins.concat('app.js'))
     .pipe(gulp.dest(target))
 
-gulp.task "all", ["html", "assets", "favicon", "css", "js"]
+gulp.task "build", ["clean"], ->
+  gulp.start(["html", "assets", "favicon", "css", "js"])
 
-gulp.task "serve", ["all"], ->
+gulp.task "serve", ["build"], ->
   connect_lr  = require "connect-livereload"
   lr_server = require("tiny-lr")()
   app = express()
   app.use(connect_lr())
-  app.use(express.static('.'))
+  app.use(express.static(target))
   app.listen(config.express_port)
 
 gulp.task "reload", ["init"], ->
@@ -103,8 +104,6 @@ gulp.task "clean", ["init"], () ->
 
 gulp.task "develop", ["clean"], ->
   gulp.start "watch"
-
-gulp.task "build", ["all"]
 
 gulp.task "default", ["clean"], ->
   gulp.start "build"

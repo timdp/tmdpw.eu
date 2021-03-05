@@ -19,5 +19,5 @@ default:
         href: "https://n26.com/r/timd7240"
   source_path: "src"
   lib_path: "lib"
-  target_path: "res"
+  target_path: "dist"
   index_name: "index"

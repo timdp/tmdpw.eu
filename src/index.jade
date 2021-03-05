@@ -5,8 +5,8 @@ html(lang="en")
     title #{title} | #{subtitle}
     link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Permanent+Marker&text=#{title}")
     link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Raleway:300&subset=latin")
-    link(rel="stylesheet", href="res/default.css")
-    link(rel="shortcut icon", href="res/favicon.png")
+    link(rel="stylesheet", href="default.css")
+    link(rel="shortcut icon", href="favicon.png")
   body
     header
       .container
@@ -22,6 +22,6 @@ html(lang="en")
       a(href="#fin", data-scroll) &#x25BC;
     .shade
     #fin
-    script(src="res/app.js")
+    script(src="app.js")
     script.
       !function(t,m,d,p,w,e,u){t.GoogleAnalyticsObject=w,t[w]=t[w]||function(){(t[w].q=t[w].q||[]).push(arguments)},t[w].l=+new Date,e=m.createElement(d),u=m.getElementsByTagName(d)[0],e.src=p,u.parentNode.insertBefore(e,u)}(this,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","#{ga_property}");ga("require","displayfeatures");ga("send","pageview");
