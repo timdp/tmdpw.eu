@@ -1,0 +1,32 @@
+@media (min-width: 480px) {
+  body {
+    @include horizontal-flex;
+    height: 100%;
+  }
+
+  header, nav {
+    height: 100%;
+  }
+
+  nav {
+    margin-left: - $logo_radius - $logo_border_width;
+    padding-left: $logo_radius + $logo_border_width + $logo_nav_distance;
+    ul {
+      text-align: left;
+    }
+  }
+
+  header .container {
+    width: ($logo_radius + $logo_border_width) * 2;
+    height: ($logo_radius + $logo_border_width) * 2;
+    background: $background_color;
+  }
+
+  .shade {
+    width: 50%;
+  }
+
+  .down {
+    display: none;
+  }
+}

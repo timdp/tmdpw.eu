@@ -1,0 +1,23 @@
+default:
+  express_port: 4000
+  livereload_port: 35729
+  properties:
+    title: "@tmdpw"
+    subtitle: "Tim De Pauw"
+    tint: "#40D0A0"
+    ga_property: "UA-46840642-1"
+    navigation:
+      - name: "Twitter"
+        href: "https://twitter.com/tmdpw"
+      - name: "LinkedIn"
+        href: "https://linkedin.com/in/timdp"
+      - name: "GitHub"
+        href: "https://github.com/timdp"
+      - name: "Unsplash"
+        href: "https://unsplash.com/@tmdpw"
+      - name: "N26"
+        href: "https://n26.com/r/timd7240"
+  source_path: "src"
+  lib_path: "lib"
+  target_path: "res"
+  index_name: "index"
