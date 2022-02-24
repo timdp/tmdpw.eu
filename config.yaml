@@ -15,8 +15,6 @@ default:
         href: "https://github.com/timdp"
       - name: "Unsplash"
         href: "https://unsplash.com/@tmdpw"
-      - name: "N26"
-        href: "https://n26.com/r/timd7240"
   source_path: "src"
   lib_path: "lib"
   target_path: "dist"
