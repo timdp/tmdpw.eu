@@ -4,12 +4,13 @@
     height: 100%;
   }
 
-  header, nav {
+  header,
+  nav {
     height: 100%;
   }
 
   nav {
-    margin-left: - $logo_radius - $logo_border_width;
+    margin-left: -$logo_radius - $logo_border_width;
     padding-left: $logo_radius + $logo_border_width + $logo_nav_distance;
     ul {
       text-align: left;

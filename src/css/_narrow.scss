@@ -7,7 +7,8 @@
   color: $tint;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -17,7 +18,7 @@ body {
   @include vertical-flex;
   color: $foreground_color;
   background: $background_color;
-  font: {      
+  font: {
     family: $base_font_family;
     size: $base_font_size;
     style: $base_font_style;
@@ -29,7 +30,8 @@ body {
   overflow: hidden;
 }
 
-header, nav {
+header,
+nav {
   height: 50%;
   min-height: 50%; // Makes IE accept the height.
   margin: 0;
@@ -63,7 +65,8 @@ header {
         }
         line-height: $title_font_leading;
         text-transform: $title_font_transform;
-        margin: $title_vertical_offset + $base_font_leading + $title_subtitle_distance 0 0 0;
+        margin: $title_vertical_offset + $base_font_leading +
+          $title_subtitle_distance 0 0 0;
         padding: 0;
       }
       div.subtitle {
@@ -118,7 +121,7 @@ nav {
 .down {
   display: block;
   position: absolute;
-  bottom: $base_font_size / 2;
+  bottom: calc($base_font_size / 2);
   left: 0;
   width: 100%;
   text-align: center;
